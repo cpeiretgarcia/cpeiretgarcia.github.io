@@ -36,7 +36,7 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Clara Peiret-García
   email: c.peiret-garcia2@newcastle.ac.uk # change to your email address
-  links:
+  links
     # The first element serves as the copyright owner's link
     - https://bsky.app/profile/cpeiretgarcia.bsky.social # change to your Bluesky homepage
     - https://github.com/cpeiretgarcia # change to your GitHub homepage
