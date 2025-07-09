@@ -7,3 +7,7 @@ url: "https://cpeiretgarcia.github.io" # replace with your GitHub Pages URL
 # Optional settings
 email: c.peiret-garcia@ucl.ac.uk
 github_username: cpeiretgarcia
+
+header_pages:
+  - about.md
+  - projects.md
