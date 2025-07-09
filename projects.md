@@ -54,7 +54,7 @@ permalink: /projects/
     A hands-on workshop introducing Small Area Estimation methods to a general audience with examples in R.
   </p>
   <p class="project-author">
-    By Clara Peiret-García. Materials available on <a href="https://github.com/cpeiretgarcia/sae_workshop" target="_blank">GitHub</a>.
+    By Clara Peiret-García.
   </p>
 </div>
 
