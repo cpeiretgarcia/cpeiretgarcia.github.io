@@ -7,40 +7,57 @@ permalink: /projects/
 <style>
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 2rem;
 }
-.project-card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-  background: white;
-  text-decoration: none;
-  color: inherit;
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
-.project-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.project-card img {
+.project-item img {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 8px;
 }
-.project-card h3 {
-  margin: 0;
-  padding: 12px;
+.project-title {
   font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+.project-title a {
+  color: #222;
+  text-decoration: none;
+}
+.project-title a:hover {
+  text-decoration: underline;
+}
+.project-description {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+.project-author {
+  font-size: 0.85rem;
+  color: #666;
 }
 </style>
 
 <div class="project-grid">
 
-<a href="/projects/sae_workshop/" class="project-card">
-  <img src="/assets/img/projects/SAE_methods.jpg" alt="SAE Workshop">
-  <h3>SAE Workshop</h3>
-</a>
+<div class="project-item">
+  <img src="/assets/img/projects/sae_workshop.jpg" alt="SAE Workshop">
+  <p class="project-title"><a href="/projects/sae_workshop/">SAE Workshop</a></p>
+  <p class="project-description">
+    A hands-on workshop introducing Small Area Estimation methods to a general audience with examples in R.
+  </p>
+  <p class="project-author">
+    By Clara Peiret-García. Materials available on <a href="https://github.com/cpeiretgarcia/sae_workshop" target="_blank">GitHub</a>.
+  </p>
+</div>
+
+<!-- Add more project blocks here -->
 
 </div>
