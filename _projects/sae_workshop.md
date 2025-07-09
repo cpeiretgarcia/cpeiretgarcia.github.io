@@ -1,7 +1,5 @@
 ---
 layout: page
 title: SAE Workshop
-permalink: /_projects/sae_workshop/
 ---
-
-# Hello
+This is a hands-on workshop on Small Area Estimation using R...

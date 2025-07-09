@@ -49,7 +49,7 @@ permalink: /projects/
 
 <div class="project-item">
   <img src="/assets/img/projects/sae_workshop.jpg" alt="SAE Workshop">
-  <p class="project-title"><a href="/_projects/sae_workshop/">SAE Workshop</a></p>
+  <p class="project-title"><a href="/projects/sae_workshop/">SAE Workshop</a></p>
   <p class="project-description">
     A hands-on workshop introducing Small Area Estimation methods to a general audience with examples in R.
   </p>
@@ -57,7 +57,5 @@ permalink: /projects/
     By Clara Peiret-García.
   </p>
 </div>
-
-<!-- Add more project blocks here -->
 
 </div>
