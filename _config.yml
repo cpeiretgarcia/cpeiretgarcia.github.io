@@ -1,9 +1,9 @@
-title: Dr. Your Name
-description: Academic personal website
+title: Clara Peiret-García
+description: 
 theme: minima
 baseurl: "" # leave empty for user/organization site
-url: "https://yourusername.github.io" # replace with your GitHub Pages URL
+url: "https://cpeiretgarcia.github.io" # replace with your GitHub Pages URL
 
 # Optional settings
-email: your@email.com
-github_username: yourusername
+email: c.peiret-garcia@ucl.ac.uk
+github_username: cpeiretgarcia
