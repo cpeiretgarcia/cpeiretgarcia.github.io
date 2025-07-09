@@ -4,7 +4,6 @@ title: Projects
 permalink: /projects/
 ---
 
-Here are some of my current and past projects:
+## Ongoing Projects
 
-- **Project 1**: Description...
-- **Project 2**: Description...
+- [Small Area Estimation Workshop](/projects/sae_workshop/)
