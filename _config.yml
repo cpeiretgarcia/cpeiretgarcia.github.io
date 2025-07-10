@@ -1,10 +1,14 @@
-title: 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+title: "Home"
 description: 
 theme: minima
 baseurl: "" # leave empty for user/organization site
-url: "https://cpeiretgarcia.github.io" # replace with your GitHub Pages URL
+url: "https://cpeiretgarcia.github.io"
 
-# Optional settings
 email: c.peiret-garcia@ucl.ac.uk
 github_username: cpeiretgarcia
 
