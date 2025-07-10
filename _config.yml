@@ -7,14 +7,13 @@ title: "Home"
 author:
   name: Clara Peiret-García
   email: c.peiret-garcia@ucl.ac.com
-  github_username: cpeiretgarcia
 
 description: 
 theme: minima
 baseurl: "" # leave empty for user/organization site
 url: "https://cpeiretgarcia.github.io"
 
-
+github_username: cpeiretgarcia
 
 header_pages:
   - about.md
