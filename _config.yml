@@ -3,7 +3,7 @@ collections:
     output: true
     permalink: /projects/:name/
 
-title:
+title: 
 email: c.peiret-garcia@ucl.ac.uk
 github_username: cpeiretgarcia
 
