@@ -313,6 +313,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
+  - jekyll-polyglot
+
+languages: ["en", "es"]
+default_lang: "en"
+exclude_from_localization: ["assets", "css"]
+
 
 # Mimic GitHub Pages with --safe
 whitelist:
