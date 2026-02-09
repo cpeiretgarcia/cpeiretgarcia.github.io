@@ -5,6 +5,8 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+
+sitemap: false
 ---
 
 Hi, I'm Clara. I work at UCL as a Research Fellow in Urban Analytics at the [Centre for Advanced Spatial Analysis (CASA)](https://www.ucl.ac.uk/bartlett/casa). Within CASA, I am part of the [City Modelling Lab (CML)](https://citymodellinglab.github.io), where we focus on developing spatial analytics methods, data, and tools to improve our understanding on complex urban challenges.
