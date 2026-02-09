@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/bio-photo.jpg"
+  avatar           : "https://citymodellinglab.github.io/author/clara-peiret-garcia/avatar_hu2421090154968f2c4c5ca55dc968a19a_39477_270x270_fill_q75_lanczos_center.jpg"
   name             : "Clara Peiret-García"
   pronouns         : # example: "she/her"  
   bio              : "Research Fellow in Urban Analytics | Centre for Advanced Spatial Analysis @ UCL"
