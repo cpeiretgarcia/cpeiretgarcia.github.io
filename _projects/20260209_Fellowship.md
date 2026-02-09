@@ -3,7 +3,7 @@ title: "TRACK-UK"
 subtitle: "Synthesised Census and Small Area Statistics for Transport and Energy"
 collection: projects
 category: projects
-permalink: /projects/20260209_Fellowship.md
+permalink: /project/20260209_Fellowship
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2009-10-01
 venue: 'Journal 1'
