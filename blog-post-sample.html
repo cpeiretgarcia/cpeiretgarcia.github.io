@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Mobility Inequalities Through Data - Clara Peiret-García</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2d5d4f;
+            --text: #2a2a2a;
+            --text-light: #666;
+            --bg: #fafafa;
+            --white: #ffffff;
+            --border: #e5e5e5;
+        }
+
+        body {
+            font-family: 'Work Sans', -apple-system, sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Article Header */
+        .article-header {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .post-date {
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .post-category {
+            color: var(--primary);
+            font-weight: 400;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .post-excerpt {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Article Content */
+        .article-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            background: var(--white);
+        }
+
+        .article-body {
+            padding: 3rem 0;
+        }
+
+        .article-body h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 2.5rem 0 1rem;
+            color: var(--text);
+        }
+
+        .article-body h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin: 2rem 0 1rem;
+            color: var(--text);
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+            color: var(--text-light);
+        }
+
+        .article-body a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .article-body a:hover {
+            border-bottom-color: var(--primary);
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            color: var(--text-light);
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .article-body blockquote {
+            border-left: 3px solid var(--primary);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* Back to Blog */
+        .back-to-blog {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+        }
+
+        .back-to-blog a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .back-to-blog a::before {
+            content: '← ';
+        }
+
+        .back-to-blog a:hover {
+            transform: translateX(-4px);
+        }
+
+        /* Footer */
+        footer {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-header {
+                padding: 7rem 1.5rem 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-content {
+                padding: 0 1.5rem 3rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Clara Peiret-García</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article>
+        <header class="article-header">
+            <div class="post-meta">
+                <span class="post-date">February 13, 2025</span>
+                <span class="post-category">Research</span>
+            </div>
+            <h1>Understanding Mobility Inequalities Through Data</h1>
+            <p class="post-excerpt">
+                Transport inequalities affect millions of people daily, yet our current approaches to measuring and addressing them remain limited. In this post, I explore how combining different data sources can help us better understand who has access to mobility—and who doesn't.
+            </p>
+        </header>
+
+        <div class="article-content">
+            <div class="article-body">
+                <p>
+                    When we talk about transport inequality, we're really talking about access to opportunity. The ability to get to work, healthcare, education, and social activities isn't distributed equally across our cities—and this has profound implications for people's lives.
+                </p>
+
+                <h2>The Challenge of Measurement</h2>
+
+                <p>
+                    Traditional approaches to understanding transport patterns have relied heavily on travel surveys. While these have given us valuable insights, they come with significant limitations:
+                </p>
+
+                <ul>
+                    <li>Sample sizes are often too small to capture the experiences of marginalized communities</li>
+                    <li>Survey fatigue and non-response bias can skew results</li>
+                    <li>They typically focus on commuting trips, missing the full picture of daily mobility</li>
+                    <li>The cost and time required for surveys limits how frequently we can collect data</li>
+                </ul>
+
+                <p>
+                    This is where new data sources become interesting. Smart card data, mobile phone records, and other digital traces can give us unprecedented detail about how people move through cities. But they also come with their own challenges around privacy, bias, and interpretation.
+                </p>
+
+                <h2>A Multi-Source Approach</h2>
+
+                <p>
+                    Rather than relying on a single data source, my research explores how we can combine different types of data to build a more complete picture. By bringing together traditional surveys with newer digital data sources and fine-grained demographic information, we can start to identify patterns that would be invisible in any single dataset.
+                </p>
+
+                <blockquote>
+                    "The goal isn't just to map where people go, but to understand the structural factors that shape those patterns—and how they differ across demographic groups."
+                </blockquote>
+
+                <h3>What This Means for Policy</h3>
+
+                <p>
+                    Understanding mobility patterns at this level of detail can inform more equitable transport planning. Instead of designing systems for an imaginary "average traveler," we can develop policies that respond to the diverse needs of different communities.
+                </p>
+
+                <p>
+                    This might mean recognizing that parents making school drop-off trips have different needs than commuters, or that older adults' mobility patterns require different infrastructure than what current planning prioritizes.
+                </p>
+
+                <h2>Looking Forward</h2>
+
+                <p>
+                    As we develop better methods for understanding mobility, we also need to think carefully about how this knowledge gets used. Data about how people move is sensitive, and any approach to collecting and analyzing it needs to center privacy and equity from the start.
+                </p>
+
+                <p>
+                    The challenge ahead is not just technical—it's about ensuring that better data leads to better outcomes for everyone, especially those who have been underserved by existing transport systems.
+                </p>
+            </div>
+
+            <div class="back-to-blog">
+                <a href="blog.html">Back to all posts</a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 Clara Peiret-García</p>
+    </footer>
+</body>
+</html>
