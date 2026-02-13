@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clara Peiret Garcia</title>
+    <title>Clara Peiret-García</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -18,8 +18,13 @@
             --primary: #2d5d4f;
             --text: #2a2a2a;
             --text-light: #666;
-            --bg: #ffffff;
+            --bg: #fafafa;
+            --white: #ffffff;
             --border: #e5e5e5;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -29,6 +34,56 @@
             color: var(--text);
             background: var(--bg);
             font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .background-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.02;
+            z-index: 0;
+            background-image: 
+                linear-gradient(var(--primary) 1px, transparent 1px),
+                linear-gradient(90deg, var(--primary) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridShift 25s linear infinite;
+        }
+
+        @keyframes gridShift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+
+        .accent-shape {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary), transparent);
+            opacity: 0.04;
+            filter: blur(100px);
+            z-index: 0;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .accent-shape:nth-child(1) {
+            top: -15%;
+            right: -15%;
+        }
+
+        .accent-shape:nth-child(2) {
+            bottom: -15%;
+            left: -15%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(40px, 40px); }
         }
 
         /* Navigation */
@@ -36,10 +91,18 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(250, 250, 250, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             z-index: 100;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: all 0.3s ease;
+        }
+
+        nav.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         nav .container {
@@ -78,50 +141,79 @@
 
         /* Hero Section */
         .hero {
-            padding: 10rem 2rem 5rem;
-            max-width: 1000px;
-            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-content {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 3rem;
-            align-items: start;
+            text-align: center;
+            max-width: 700px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
         }
 
-        .bio h1 {
+        .hero h1 {
             font-family: 'Crimson Pro', serif;
-            font-size: 2.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 300;
             margin-bottom: 1rem;
             color: var(--text);
+            position: relative;
         }
 
-        .bio .title {
-            font-size: 1rem;
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--primary);
+            animation: underlineExpand 1.5s ease-out 0.5s both;
+        }
+
+        @keyframes underlineExpand {
+            from { transform: translateX(-50%) scaleX(0); }
+            to { transform: translateX(-50%) scaleX(1); }
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
             color: var(--text-light);
             margin-bottom: 2rem;
-        }
-
-        .bio p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
+            font-weight: 300;
         }
 
         .contact-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
+            justify-content: center;
             margin-top: 2rem;
         }
 
@@ -136,96 +228,170 @@
             color: var(--primary);
         }
 
-        /* Main Content */
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-            border-top: 1px solid var(--border);
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.5s both;
+            cursor: pointer;
         }
 
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .scroll-indicator span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+        }
+
+        .scroll-arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid var(--primary);
+            border-bottom: 2px solid var(--primary);
+            transform: rotate(45deg);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: rotate(45deg) translateY(0); }
+            50% { transform: rotate(45deg) translateY(8px); }
+        }
+
+        /* Content Sections */
         section {
-            margin-bottom: 5rem;
+            background: var(--white);
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        section:nth-child(even) {
+            background: var(--bg);
+        }
+
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .section-content.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         h2 {
             font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
+            font-size: clamp(2rem, 4vw, 2.5rem);
             font-weight: 300;
             margin-bottom: 3rem;
             color: var(--text);
+            text-align: center;
+            position: relative;
         }
 
-        .research-grid {
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+            margin: 1.5rem auto 0;
+        }
+
+        .bio-grid {
             display: grid;
-            gap: 3rem;
-        }
-
-        .research-item h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.3rem;
-            font-weight: 400;
-            margin-bottom: 0.8rem;
-            color: var(--text);
-        }
-
-        .research-item p {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            line-height: 1.9;
             color: var(--text-light);
-            line-height: 1.8;
+        }
+
+        .bio-grid p {
+            font-size: 1rem;
+        }
+
+        .bio-grid a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .bio-grid a:hover {
+            border-bottom-color: var(--primary);
+        }
+
+        .work-description {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         /* Footer */
         footer {
-            max-width: 1000px;
-            margin: 0 auto;
+            background: var(--white);
             padding: 3rem 2rem;
-            border-top: 1px solid var(--border);
             text-align: center;
             color: var(--text-light);
             font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            position: relative;
+            z-index: 1;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
-                padding: 8rem 1.5rem 4rem;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
+                padding: 1.5rem;
             }
 
             .profile-image {
-                margin: 0 auto;
-            }
-
-            .contact-links {
-                justify-content: center;
-            }
-
-            .bio h1 {
-                font-size: 2rem;
+                width: 150px;
+                height: 150px;
             }
 
             nav ul {
                 gap: 1.5rem;
             }
 
-            h2 {
-                font-size: 1.6rem;
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .scroll-indicator {
+                bottom: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <nav>
+    <div class="background-grid"></div>
+    <div class="accent-shape"></div>
+    <div class="accent-shape"></div>
+
+    <nav id="navbar">
         <div class="container">
-            <a href="#" class="logo">Clara Peiret Garcia</a>
+            <a href="#" class="logo">Clara Peiret-García</a>
             <ul>
+                <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#research">Research</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="cv.html">CV</a></li>
             </ul>
@@ -237,31 +403,77 @@
             <img src="https://citymodellinglab.github.io/author/clara-peiret-garcia/avatar_hu2421090154968f2c4c5ca55dc968a19a_39477_270x270_fill_q75_lanczos_center.jpg" 
                  alt="Clara Peiret-García" 
                  class="profile-image">
-            <div class="bio">
-                <h1>Clara Peiret-García</h1>
-                <p class="title">I am a Research Fellow in Urban Analytics at the <a href="https://www.ucl.ac.uk/bartlett/casa" target="_blank">Centre for Advanced Spatial Analysis</a> at UCL. From February 2026 I am a Smart Data Research UK Fellow. My project aims at generating mobility profiles at high spatial resolution. You can find out more about it <a href="https://cpeiretgarcia.github.io/geomobility/" target="_blank">here</a>.</p>                
-                <p>Before joining UCL, I completed my PhD in Geospatial Data Science at (<a href="https://www.ncl.ac.uk" target="_blank"> Newcastle University</a>). My thesis looked at the development of travel profiles using survey data, and how these profiles can help us identify inequalities in mobility and accessibility across demographic groups. I also hold a Masters in Geospatial Engineering (Newcastle University) and a Masters in Regional and Local Economic Development (<a href="https://www.uva.es/export/sites/uva/" target="_blank"> Universidad de Valladolid</a>)</p>
-                <div class="contact-links">
-                    <a href="mailto:c.peiret-garcia@ucl.ac.uk">Email</a>
-                    <a href="https://github.com/cpeiretgarcia">GitHub</a>
-                    <!-- <a href="https://scholar.google.com/yourid">Scholar</a> -->
-                    <a href="https://www.linkedin.com/in/cpeiretgarcia/">LinkedIn</a>
-                </div>
+            <h1>Clara Peiret-García</h1>
+            <p class="tagline">Research Fellow in Urban Analytics</p>
+            <div class="contact-links">
+                <a href="mailto:c.peiret-garcia@ucl.ac.uk">Email</a>
+                <a href="https://github.com/cpeiretgarcia">GitHub</a>
+                <a href="https://www.linkedin.com/in/cpeiretgarcia/">LinkedIn</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <span>Learn More</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About</h2>
+            <div class="bio-grid">
+                <p>I am a Research Fellow in Urban Analytics at the <a href="https://www.ucl.ac.uk/bartlett/casa" target="_blank">Centre for Advanced Spatial Analysis</a> at UCL. From February 2026 I am a Smart Data Research UK Fellow. My project aims at generating mobility profiles at high spatial resolution. You can find out more about it <a href="https://cpeiretgarcia.github.io/geomobility/" target="_blank">here</a>.</p>
+                
+                <p>Before joining UCL, I completed my PhD in Geospatial Data Science at <a href="https://www.ncl.ac.uk" target="_blank">Newcastle University</a>. My thesis looked at the development of travel profiles using survey data, and how these profiles can help us identify inequalities in mobility and accessibility across demographic groups. I also hold a Masters in Geospatial Engineering (Newcastle University) and a Masters in Regional and Local Economic Development (<a href="https://www.uva.es/export/sites/uva/" target="_blank">Universidad de Valladolid</a>).</p>
             </div>
         </div>
     </section>
 
-    <main>
-        <section id="work">
-            <h2>About My Work</h2>
-            <p style="max-width: 750px; line-height: 1.8; color: var(--text-light);">
+    <section id="work">
+        <div class="section-content">
+            <h2>My Work</h2>
+            <p class="work-description">
                 My work is at the intersection of spatial analytics and transport research, with focus on travel behaviour and transport inequalities. I am interested in how different people engage with the transport system, and what inequalities stem from these behaviours.
             </p>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Clara Peiret-García</p>
     </footer>
+
+    <script>
+        // Show navbar on scroll
+        let lastScroll = 0;
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('visible');
+            } else {
+                navbar.classList.remove('visible');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.section-content').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
