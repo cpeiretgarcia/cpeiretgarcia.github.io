@@ -172,6 +172,8 @@
       font-family: 'Crimson Pro', serif !important;
       font-weight: 300 !important;
       font-size: 0.5em !important;
+      bottom: 2em !important;
+      right: 2em !important;
     }
 
     /* Don't let slide background override background images */
@@ -179,12 +181,15 @@
       background: transparent !important;
     }
 
-    /* Footer much smaller */
+    /* Footer much smaller and raised */
     .reveal .footer, .footer p {
       font-family: 'Work Sans', sans-serif !important;
       font-weight: 300 !important;
       color: var(--text-light) !important;
       font-size: 0.55em !important;
+    }
+    .reveal .footer {
+      bottom: 2em !important;
     }
   </style>
   <link href="gisruk2026_CPG_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -651,7 +656,7 @@ Transport for London. 2025. <span>“Annual <span>Report</span> 2024/2025.”</s
         height: 720,
 
         // Factor of the display size that should remain empty around the content
-        margin: 6.0e-2,
+        margin: 0.12,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
