@@ -51,6 +51,141 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="gisruk2026_CPG_files/libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2d5d4f;
+      --text: #2a2a2a;
+      --text-light: #666;
+      --bg: #fafafa;
+      --border: #e5e5e5;
+    }
+
+    /* Background */
+    .reveal-viewport, .reveal .slides {
+      background: var(--bg) !important;
+    }
+    .reveal {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+      font-family: 'Work Sans', -apple-system, sans-serif !important;
+      font-weight: 300 !important;
+    }
+
+    /* Headings */
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Crimson Pro', serif !important;
+      font-weight: 300 !important;
+      color: var(--text) !important;
+      text-transform: none !important;
+      letter-spacing: 0 !important;
+    }
+    .reveal h1 { font-size: 2.4em !important; }
+    .reveal h2 { font-size: 1.6em !important; }
+    .reveal h3 {
+      font-size: 1.2em !important;
+      font-weight: 400 !important;
+      color: var(--text) !important;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.3em;
+      margin-bottom: 0.8em;
+    }
+
+    /* Title slide */
+    #title-slide {
+      background: var(--bg) !important;
+    }
+    #title-slide .title {
+      font-family: 'Crimson Pro', serif !important;
+      font-weight: 300 !important;
+      color: var(--text) !important;
+      font-size: 2.2em !important;
+    }
+    #title-slide .subtitle {
+      font-family: 'Work Sans', sans-serif !important;
+      font-weight: 300 !important;
+      color: var(--text-light) !important;
+      font-size: 0.95em !important;
+      margin-top: 0.6em !important;
+    }
+    #title-slide .quarto-title-author-name {
+      font-family: 'Work Sans', sans-serif !important;
+      font-weight: 400 !important;
+      color: var(--primary) !important;
+      font-size: 0.9em !important;
+    }
+    #title-slide .date {
+      color: var(--text-light) !important;
+      font-size: 0.8em !important;
+    }
+
+    /* Section title slides */
+    .reveal .title-slide h1 {
+      color: var(--primary) !important;
+      font-size: 2em !important;
+    }
+
+    /* Body text */
+    .reveal p, .reveal li {
+      font-family: 'Work Sans', sans-serif !important;
+      font-weight: 300 !important;
+      color: var(--text) !important;
+      line-height: 1.7 !important;
+    }
+    .reveal strong {
+      font-weight: 600 !important;
+      color: var(--primary) !important;
+    }
+
+    /* Links */
+    .reveal a {
+      color: var(--primary) !important;
+    }
+
+    /* Progress bar */
+    .reveal .progress span {
+      background: var(--primary) !important;
+    }
+
+    /* Controls */
+    .reveal .controls button {
+      color: var(--primary) !important;
+    }
+
+    /* Tables */
+    .reveal table th {
+      color: var(--primary) !important;
+      font-weight: 400 !important;
+      border-bottom: 2px solid var(--primary) !important;
+    }
+    .reveal table td {
+      border-bottom: 1px solid var(--border) !important;
+      color: var(--text) !important;
+    }
+
+    /* Slide number */
+    .reveal .slide-number {
+      background: transparent !important;
+      color: var(--text-light) !important;
+      font-family: 'Work Sans', sans-serif !important;
+      font-size: 0.7em !important;
+    }
+
+    /* Don't let slide background override background images */
+    .reveal .slides section[data-background-image] {
+      background: transparent !important;
+    }
+
+    /* Footer much smaller */
+    .reveal .footer, .footer p {
+      font-family: 'Work Sans', sans-serif !important;
+      font-weight: 300 !important;
+      color: var(--text-light) !important;
+      font-size: 0.4em !important;
+    }
+  </style>
   <link href="gisruk2026_CPG_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="gisruk2026_CPG_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="gisruk2026_CPG_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -232,11 +367,8 @@ Who is going to be affected by these changes? <strong>We need to understand trav
 </ul>
 </div>
 </section>
-<section id="section" class="slide level2" data-background-image="afc_barriers.png" data-background-size="cover">
-<h2></h2>
-<div class="footer">
-
-</div>
+<section class="slide level2" style="padding:0; margin:0;">
+<img src="afc_barriers.png" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
 </section>
 <section class="slide level2">
 
@@ -249,7 +381,7 @@ Who is going to be affected by these changes? <strong>We need to understand trav
 </figure>
 </div>
 </div><div class="column" style="width:55%;">
-<div style="font-size: 80%;">
+<div style="font-size: 62%;">
 <ul>
 <li><p>Open dataset curated by TfL — <strong>total entries and exits</strong> aggregated to <strong>15-minute intervals</strong> during a typical autumn week (Mon–Sun).</p></li>
 <li><p>Entry and exit counts extracted across <strong>96 intervals × 4 day types</strong>: Mon–Thu · Friday · Saturday · Sunday.</p></li>
