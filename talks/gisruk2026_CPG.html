@@ -414,9 +414,28 @@ Clara Peiret-García · Dennis N. Kimani · Esra Suel
 <section>
 <section id="questions" class="title-slide slide level1 center">
 <h1>Questions?</h1>
-<p>e: c.peiret-garcia@ucl.ac.uk</p>
-<p>w: cpeiretgarcia.github.io</p>
-<p>w: citymodellinglab.uk</p>
+<div style="display:flex; align-items:center; justify-content:center; gap:3em; margin-top:1em;">
+  <div style="text-align:left;">
+    <p>e: c.peiret-garcia@ucl.ac.uk</p>
+    <p>w: cpeiretgarcia.github.io</p>
+    <p>w: citymodellinglab.uk</p>
+  </div>
+  <div>
+    <div id="qrcode" style="display:inline-block; padding:10px; background:white; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.1);"></div>
+    <p style="margin-top:0.5em; font-size:0.55em; color:var(--text-light); font-family:'Work Sans',sans-serif; text-align:center;">slides</p>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  new QRCode(document.getElementById("qrcode"), {
+    text: "https://cpeiretgarcia.github.io/talks/gisruk2026_CPG.html#/title-slide",
+    width: 150,
+    height: 150,
+    colorDark: "#2d5d4f",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
 </section>
 <section class="slide level2 smaller scrollable" id="references">
 
