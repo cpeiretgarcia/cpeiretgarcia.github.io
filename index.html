@@ -344,6 +344,67 @@
             margin: 0 auto;
         }
 
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .portfolio-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .portfolio-card:hover {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .portfolio-card iframe {
+            width: 100%;
+            height: 420px;
+            border: none;
+            display: block;
+        }
+
+        .portfolio-card-body {
+            padding: 1.25rem 1.5rem 1.5rem;
+        }
+
+        .portfolio-card-body h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .portfolio-card-body p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .portfolio-card-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .portfolio-card-link:hover {
+            border-bottom-color: var(--primary);
+        }
+
         /* Footer */
         footer {
             background: var(--white);
@@ -392,6 +453,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#talks">Talks</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="cv.html">CV</a></li>
@@ -436,6 +498,27 @@
             <p class="work-description">
                 My work is at the intersection of spatial analytics and transport research, with focus on travel behaviour and transport inequalities. I am interested in how different people engage with the transport system, and what inequalities stem from these behaviours.
             </p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="section-content">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <iframe
+                        src="https://cpeiret-garcia.shinyapps.io/accesibilitat-valladolid/"
+                        title="Accessibilitat Valladolid"
+                        loading="lazy"
+                        allow="fullscreen">
+                    </iframe>
+                    <div class="portfolio-card-body">
+                        <h3>Accessibility in Valladolid</h3>
+                        <p>An interactive Shiny app exploring accessibility to urban services across the city of Valladolid, Spain.</p>
+                        <a href="https://cpeiret-garcia.shinyapps.io/accesibilitat-valladolid/" target="_blank" class="portfolio-card-link">Open full app ↗</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
