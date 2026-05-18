@@ -8,3 +8,21 @@
     font-family: 'Work Sans', -apple-system, sans-serif;
     font-weight: 300;
 }
+
+/* Title slide sizing */
+#title-slide .title {
+    font-size: 1.6em;
+}
+
+#title-slide .subtitle {
+    font-size: 1em;
+}
+
+#title-slide .quarto-title-author-name {
+    font-size: 0.85em;
+}
+
+#title-slide .quarto-title-affiliation,
+#title-slide .date {
+    font-size: 0.75em;
+}
