@@ -1,0 +1,10 @@
+/* Custom styles for dissertation workshop slides */
+.reveal h1, .reveal h2, .reveal h3 {
+    font-family: 'Crimson Pro', 'Georgia', serif;
+    font-weight: 300;
+}
+
+.reveal .slides section {
+    font-family: 'Work Sans', -apple-system, sans-serif;
+    font-weight: 300;
+}

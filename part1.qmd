@@ -1,0 +1,537 @@
+---
+title: "A Practical Guide to Writing a Good Dissertation - Part I"
+subtitle: "The Research Question and Finding the Research Gap"
+author: "Clara Peiret-García"
+institute: "UCL Centre for Advanced Spatial Analysis"
+date: last-modified
+# format: pdf
+format:
+   revealjs:
+     transition: fade
+     theme: simple
+     css: style.css
+     footer: '[]()'
+     mainfont: Avenir Book
+     slide-number: true
+     show-slide-number: print
+---
+
+## The Research Process
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 0.6em; margin-top: 2.5em; font-size: 68%;">
+
+<div style="position: relative; display: flex; align-items: center; gap: 0.6em;">
+
+<div class="fragment fade-in" style="position: absolute; inset: -0.5em -0.8em; border: 2px solid #adb5bd; border-radius: 6px; pointer-events: none;"></div>
+
+<div style="text-align: center; width: 110px;">
+  <div style="font-weight: 600; color: #5ba4cf;">Research<br>Question</div>
+</div>
+
+<div style="color: #adb5bd; font-size: 1.2em;">→</div>
+
+<div style="text-align: center; width: 110px;">
+  <div style="font-weight: 600; color: #60b876;">Literature<br>Review</div>
+</div>
+
+</div>
+
+<div style="color: #adb5bd; font-size: 1.2em;">→</div>
+
+<div style="text-align: center; width: 110px;">
+  <div style="font-weight: 600; color: #f4a261;">Data &amp;<br>Methods</div>
+</div>
+
+<div style="color: #adb5bd; font-size: 1.2em;">→</div>
+
+<div style="text-align: center; width: 110px;">
+  <div style="font-weight: 600; color: #c97db5;">Analysis</div>
+</div>
+
+<div style="color: #adb5bd; font-size: 1.2em;">→</div>
+
+<div style="text-align: center; width: 110px;">
+  <div style="font-weight: 600; color: #e86363;">Results &amp;<br>Discussion</div>
+</div>
+
+<div style="color: #adb5bd; font-size: 1.2em;">→</div>
+
+<div style="text-align: center; width: 110px;">
+  <div style="font-weight: 600; color: #adb5bd;">Conclusion</div>
+</div>
+
+</div>
+
+:::{.notes}
+-   Before diving into the research question, give students an overview of the full research process so they can see where they are in the journey.
+
+-   The process is roughly linear, but in practice it is iterative — you will often go back and refine your question after doing the literature review, or revisit your methods after seeing early results.
+
+-   Today we are focusing on the first two steps: defining the research question and doing the literature review. These are the foundation everything else rests on.
+:::
+
+# The Research Question
+
+##
+
+![](https://static.euronews.com/articles/stories/07/44/88/84/1440x810_cmsv2_c889809d-7c40-57ad-b930-3497e2efc911-7448884.jpg){width=100%}
+
+:::{.notes}
+In The Hitchhiker's Guide to the Galaxy, a civilisation builds a supercomputer called Deep Thought to find the answer to the ultimate question of life, the universe, and everything. It computes for seven and a half million years. The answer it comes back with is 42.
+
+The problem? Nobody actually knows what the question was.
+
+And that is the joke — but it is also a very good lesson for research. 42 is a perfectly precise answer. It is concise, it is clear, it is a number. But it is completely meaningless because there is no question to give it context.
+
+This is what happens when you write a dissertation without a research question. You can collect data, run your analysis, produce maps and figures — your own version of 42 — but if you have not defined what question you are trying to answer, your reader will not know what any of it means.
+
+The research question is not a formality you fill in at the start and forget about. It is the thing that makes all your work interpretable. Every methodological choice, every result, every paragraph in your discussion should trace back to it.
+
+So before we do anything else — before we talk about data, methods, or writing — we are going to talk about how to find a good research question.
+:::
+
+## What is a Research Question?
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   The central question your piece of research is trying to answer.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   It **motivates** your research — it is the reason you are doing it.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   It guides every decision you make: what to read, what to measure, what to argue.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   Without it, your reader is left wondering: *Why are they doing all of this?*
+:::
+
+:::{.notes}
+-   The research question is the central question that your dissertation is trying to answer. It is not just a formality — it is what motivates the whole piece of work.
+
+-   Think of it like the Hitchhiker's Guide to the Galaxy: in the story, a supercomputer calculates that the answer to life, the universe, and everything is 42 — but nobody knows what the question was. Having the answer without knowing the question is useless. A good research question gives meaning to all of your findings.
+
+-   Although some of the greatest scientific discoveries came from chance — gravity, penicillin — it is still good practice to have a clear question guiding your work. It keeps you focused and helps the reader follow your argument.
+:::
+
+## What Makes a Good Research Question?
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   [**Clear**]{style="color:red;"} — provides all the context needed for the target audience to understand it
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   [**Focused**]{style="color:red;"} — the right scope for the time you have
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   [**Concise**]{style="color:red;"} — uses as few words as necessary
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   [**Novel**]{style="color:red;"} — has not yet been (sufficiently) answered
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   [**Objective**]{style="color:red;"} — avoids value judgements like "good" or "bad"
+:::
+
+:::{.notes}
+-   A good research question meets five criteria: it is clear, focused, concise, novel, and objective.
+
+-   Clear means it specifies enough context for your target audience — in your case, an academic examiner — to understand what you are investigating without needing to ask for clarification.
+
+-   Focused means the question is appropriately scoped for the time you have. A dissertation question that would require a decade of fieldwork is not focused enough.
+
+-   Concise means you are not padding the question with unnecessary words.
+
+-   Novel means the question has not already been answered in the existing literature — or at least not in the way you are approaching it.
+
+-   Objective means you avoid baking in assumptions or value judgements. "What makes X better than Y?" assumes X is better; "How does X compare to Y?" does not.
+:::
+
+## Good vs. Bad Research Questions
+
+::: {.fragment .fade-in style="font-size: 75%;"}
+**Too vague:**
+
+> *What changes can we see in urban residents over the past decade?*
+:::
+
+::: {.fragment .fade-in style="font-size: 75%;"}
+**Better:**
+
+> *How have UK cities changed between the 2011 and 2021 census in terms of the age, language, health, work, income, and family status of urban residents?*
+:::
+
+::: {.fragment .fade-in style="font-size: 75%;"}
+**Too vague:**
+
+> *What effect have anti-climate change innovations had?*
+:::
+
+::: {.fragment .fade-in style="font-size: 75%;"}
+**Better:**
+
+> *What effect have UK government green grants had on the number of heat pump installations and installer certifications between 2008 and 2022?*
+:::
+
+:::{.notes}
+-   Let's look at two pairs of examples.
+
+-   The first bad question — "What changes can we see in urban residents over the past decade?" — could mean anything. Which country? Which changes? Over what period exactly? The improved version pins down the country (UK), the time frame (2011–2021 census), and the specific dimensions of change (age, language, health, work, income, family status).
+
+-   The second bad question — "What effect have anti-climate change innovations had?" — is both vague and poorly scoped. Which innovations? In which sector? The improved version specifies the intervention (UK government green grants), the outcome (heat pump installations and certifications), and the time frame (2008–2022).
+
+-   You can use this as a quick exercise: ask your students to identify what is missing from each bad question before revealing the improved version.
+:::
+
+# Finding Your Research Question
+
+## A Step-by-Step Process
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+1.  Define your **research topic**
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+2.  Identify a specific **problem** your field needs to address
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+3.  Find the **research gap**
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+4.  **Formulate** the research question
+:::
+
+:::{.notes}
+-   Coming up with a research question is not a moment of inspiration — it is a process. We are going to walk through each step.
+:::
+
+## Step 1: Define Your Research Topic
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   You already have a broad topic from your MRes project.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   Now you need to **narrow it down**. Consider:
+    -   **Category** — a specific sociodemographic group?
+    -   **Time** — a specific period?
+    -   **Location** — a specific city or region?
+    -   **Issue** — a specific perspective or concern?
+:::
+
+:::{.notes}
+-   Your MRes project already gives you a broad topic area — transport, urban sustainability, health geography, and so on. The challenge now is to narrow it to a manageable scope.
+
+-   The four dimensions here — category, time, location, and issue — are useful lenses. You don't need to use all four, but applying at least two of them is usually enough to take a very broad topic and make it tractable.
+
+-   For example: "public transport" becomes "public transport accessibility for elderly residents in outer London between 2010 and 2020" once you apply category (elderly), location (outer London), and time (2010–2020).
+:::
+
+## Step 2: Identify a Problem
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   Think of a specific, real-world problem your field needs to address.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   Ask: *What is broken, missing, or poorly understood in this space?*
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   Examples from urban transport:
+    -   Violence against **women and girls** in public transport.
+    -   Mismatch between public **transport** supply and demand **at night**.
+    -   Unequal **accessibility** to job opportunities by bus.
+    -   Finding suitable locations for **car parks**.
+:::
+
+:::{.notes}
+-   A research question needs to be grounded in a real problem — something that practitioners, policymakers, or other researchers actually care about.
+
+-   This step helps ensure your work is relevant and that you can justify why it is worth doing. If you cannot articulate the problem, your introduction and literature review will feel thin.
+
+-   The transport examples here are all concrete: they identify a gap between what exists (a transport system) and what is needed (safety, equity, accessibility). This is what you want your students to be able to do for their own topics.
+:::
+
+## Step 3: Find the Research Gap
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   A **research gap** is what is unknown or unresolved about your problem in the academic literature.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   To find it, you need to read what others have done — this is the **literature review**.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   You are looking for:
+    -   What has been studied extensively?
+    -   What has been overlooked or understudied?
+    -   What methods have been used — and which haven't?
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   The gap is where **your research lives**.
+:::
+
+:::{.notes}
+-   The research gap is the academic justification for your dissertation. It is the answer to the question: why has nobody solved this already? Or: what is missing from the existing solutions?
+
+-   There are several kinds of gaps. A topic gap means nobody has studied your specific combination of factors. A geographic gap means it has been studied elsewhere but not in your context. A methodological gap means existing studies used different — perhaps less appropriate — methods to approach the same problem.
+
+-   To find the gap, you need to do a literature review. This is a circular process: you read to find the gap, and the gap shapes what you read next. We will cover the literature review in detail in the next session.
+:::
+
+## Step 4: Formulate the Question
+
+::: {.fragment .fade-in style="font-size: 75%;"}
+Topic → *Urban green space and health*
+:::
+
+::: {.fragment .fade-in style="font-size: 75%;"}
+Problem → *Cities are getting hotter, but green space is distributed unequally across neighbourhoods*
+:::
+
+::: {.fragment .fade-in style="font-size: 75%;"}
+Gap → *Studies link greenery to cooling effects at city scale, but few examine whether low-income areas benefit equally*
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+
+<p style="line-height: 2.2; margin-top: 1em;">
+<span style="background-color:#f4a26155; padding:2px 5px; border-radius:3px;"><em>To what extent</em></span>
+does
+<span style="background-color:#5ba4cf55; padding:2px 5px; border-radius:3px;">proximity to urban green space</span>
+reduce
+<span style="background-color:#5ba4cf55; padding:2px 5px; border-radius:3px;">heat-related hospital admissions</span>
+across
+<span style="background-color:#60b87655; padding:2px 5px; border-radius:3px;">London neighbourhoods</span>,
+and does this relationship vary by
+<span style="background-color:#c97db555; padding:2px 5px; border-radius:3px;">deprivation level</span>?
+</p>
+
+<div style="display: flex; gap: 1.2em; flex-wrap: wrap; font-size: 65%; margin-top: 0.5em;">
+  <span><span style="background-color:#f4a26155; padding:1px 6px; border-radius:3px;">Objective</span></span>
+  <span><span style="background-color:#5ba4cf55; padding:1px 6px; border-radius:3px;">Clear &amp; Concise</span></span>
+  <span><span style="background-color:#60b87655; padding:1px 6px; border-radius:3px;">Focused</span></span>
+  <span><span style="background-color:#c97db555; padding:1px 6px; border-radius:3px;">Novel</span></span>
+</div>
+
+:::
+
+:::{.notes}
+-   Walk through the process first — topic, problem, gap — then reveal the annotated question.
+
+-   Each colour maps to one of the five criteria. "To what extent" is highlighted as Objective because it asks an open question rather than assuming a direction. The specific variables (green space, hospital admissions) are highlighted as Clear and Concise. London neighbourhoods anchors the Focus. Deprivation level is the Novel element — this is what the gap identified as missing.
+
+-   You could use this as a group exercise: give students their own broad topic and have them draft a question following this sequence. Then ask them to evaluate each other's questions against the five criteria.
+:::
+
+## A Note Before the Literature Review
+
+::: {.fragment .fade-in style="font-size: 85%;"}
+-   Your research question will almost certainly **change** as you read more.
+:::
+
+::: {.fragment .fade-in style="font-size: 85%;"}
+-   This is **normal and expected** — treat the first version as a working hypothesis.
+:::
+
+::: {.fragment .fade-in style="font-size: 85%;"}
+-   The literature review is what allows you to **sharpen** it.
+:::
+
+:::{.notes}
+-   End this section by managing expectations. Students often feel anxious when their question changes — they worry it means they have wasted time. Reassure them that this is part of the process.
+
+-   The point of this session was to give them a solid starting point and a process to follow. The literature review — which we will cover next — is what refines that starting point into a final, defensible question.
+:::
+
+# The Literature Review
+
+## What is a Literature Review?
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   The section of your dissertation where you describe the development of your research area to provide a **foundation** for your own research.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   A good literature review does not just **describe** what others have done.
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+-   It **critically addresses** other approaches and explains how your research **fills the gaps** left by previous studies.
+:::
+
+:::{.notes}
+-   The literature review is not a reading list, and it is not a series of summaries. It is an argument — a critical account of where the field is, what it has got right, what it has missed, and why that matters for your work.
+
+-   Students often write literature reviews that read like annotated bibliographies: "Smith (2020) found X. Jones (2018) found Y." That is describing, not reviewing. The goal is to synthesise — to show how the papers relate to each other and build towards the gap your research will address.
+:::
+
+## How to Structure It
+
+::: {.fragment .fade-in style="font-size: 78%;"}
+**1. Foundational knowledge** — established, uncontroversial facts about your topic
+
+> *Post-industrial human activity has contributed to global warming.*
+:::
+
+::: {.fragment .fade-in style="font-size: 78%;"}
+**2. Establishing the gap** — what remains unknown, underexplored, or methodologically limited
+:::
+
+::: {.fragment .fade-in style="font-size: 78%;"}
+**3. Parallel research** — recent attempts to address the gap; critical appraisal of methods and data
+:::
+
+::: {.fragment .fade-in style="font-size: 78%;"}
+**4. Your contribution** — how your research fills the gap and why your approach is novel
+:::
+
+:::{.notes}
+-   This four-part structure mirrors the funnel technique from the introduction: you start broad and general, then narrow down to the specific gap, then explain what your research will do about it.
+
+-   The foundational layer gives your reader the uncontested background they need. You are not arguing here — you are establishing shared ground.
+
+-   The gap section is where the literature review becomes interesting. This is where you start questioning the current state of knowledge: what has been overlooked? What methods are outdated? What new data exists that nobody has used yet?
+
+-   Parallel research is a detailed critical look at the most recent work that has tried to address the gap. You are not just describing these studies — you are evaluating them. What did they do well? What are their limitations? This is how you justify why your research is still needed.
+
+-   Finally, your contribution section closes the loop: here is what everyone else has done, here is what is still missing, and here is what I am going to do about it.
+:::
+
+## Listing vs. Reviewing
+
+::: {.fragment .fade-in style="font-size: 72%;"}
+**Just listing:**
+
+> *"Gonzalez et al. (2018) found that urban trees reduce surface temperatures. Li et al. (2020) showed no significant effect of park size on air temperature. Wang et al. (2016) linked green roofs to reduced heat island intensity."*
+:::
+
+::: {.fragment .fade-in style="font-size: 72%;"}
+**Critical review:**
+
+> *"While early studies established a link between urban vegetation and surface cooling (Gonzalez et al. 2018; Wang et al. 2016), findings remain inconsistent across spatial scales. Li et al. (2020) found no significant effect of park size on air temperature, suggesting that the benefits of green infrastructure may be highly context-dependent. Crucially, none of these studies examine whether cooling effects are equitably distributed across socioeconomic groups — the gap this research addresses."*
+:::
+
+:::{.notes}
+-   This is probably the most common weakness in student literature reviews, so it is worth spending time on.
+
+-   The first version is not wrong — the facts are accurate — but it reads like a list. Each sentence stands alone. There is no connection between the studies, no tension, no argument.
+
+-   The second version does three things the first does not: it groups studies thematically, it identifies a contradiction between them (consistent effect vs. no effect) and offers a possible explanation (context-dependence), and it ends with an explicit statement of the gap. The last sentence is the most important — that is what the whole literature review has been building towards.
+
+-   Notice also that the second version uses fewer sentences to cover the same three papers. A critical review is often more concise than a listing review, because you are synthesising rather than reporting.
+:::
+
+## Finding Literature
+
+:::::: columns
+::: {.column width="49%"}
+**Find papers**
+
+::: {.fragment .fade-in style="font-size: 65%;"}
+-   [Google Scholar](https://scholar.google.com/)
+:::
+
+::: {.fragment .fade-in style="font-size: 65%;"}
+-   [Google Scholar Labs](https://scholar.google.com/scholar_labs/search?hl=en) *(AI-powered)*
+:::
+
+::: {.fragment .fade-in style="font-size: 65%;"}
+-   [ResearchRabbit](https://app.researchrabbit.ai/)
+:::
+
+::: {.fragment .fade-in style="font-size: 65%;"}
+-   [Scopus](https://www.scopus.com/pages/preview)
+:::
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+**Organise what you read**
+
+::: {.fragment .fade-in style="font-size: 65%;"}
+-   [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/) — manage references
+:::
+
+::: {.fragment .fade-in style="font-size: 65%;"}
+-   Take notes as you read — not just what, but *so what*
+:::
+
+::: {.fragment .fade-in style="font-size: 65%;"}
+-   Build a **literature review table**: paper, key argument, methods, limitations, relevance to your gap
+:::
+:::
+::::::
+
+:::{.notes}
+-   For finding papers: Google Scholar is the starting point for most people. ResearchRabbit is particularly useful because it maps connections between papers — if you find one good paper, it will show you what it cites and what cites it. Scopus is more curated and better for systematic searches.
+
+-   Google Scholar Labs is worth mentioning — it is Google's AI-powered search interface that can help students find relevant papers more quickly, though they should still read critically and not rely on AI summaries alone.
+
+-   For organising: Zotero is free and integrates directly with Word and Google Docs for citation management. The literature review table is something I strongly recommend — it forces you to engage with each paper rather than just collecting PDFs. Columns should include: authors and year, research question, methods, key findings, limitations, and relevance to your own gap.
+:::
+
+## Three Rules for Writing It
+
+::: {.fragment .fade-in style="font-size: 85%;"}
+**Don't list — argue.** Every paper should earn its place by advancing your narrative.
+:::
+
+::: {.fragment .fade-in style="font-size: 85%;"}
+**Build a story** from general to specific, ending at your research gap.
+:::
+
+::: {.fragment .fade-in style="font-size: 85%;"}
+**Show the gaps, tensions, and contradictions** in the literature — that is where your research lives.
+:::
+
+:::{.notes}
+-   These three rules summarise the whole section. If students remember nothing else, these are the things to take away.
+
+-   "Don't list, argue" means every sentence should be doing work. If you remove a paper from the review and nothing changes, it probably should not be there.
+
+-   "Build a story" means the reader should feel a sense of inevitability by the time they reach your research question — of course this is the next thing to study, because the literature has led us here.
+
+-   "Show the gaps" means being willing to say: this study was limited by X, this method cannot account for Y, this context has never been examined. That critical voice is what transforms a literature review from a summary into a scholarly contribution.
+:::
+
+## Key Takeaways
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+**Research question**
+
+-   Clear, focused, concise, novel, and objective
+-   Narrow your topic → identify a problem → find the gap → formulate
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+**Literature review**
+
+-   A critical argument, not a list
+-   Funnel from foundational knowledge → gap → your contribution
+:::
+
+::: {.fragment .fade-in style="font-size: 80%;"}
+**Next steps**
+
+-   Draft a working research question before our next meeting
+-   Start reading and keep a literature review table/notebook/whatever works for you!
+:::
+
+:::{.notes}
+-   Close by bringing the two halves of the workshop together. The research question and the literature review are not separate tasks — they are deeply intertwined. You start with a question, the literature sharpens it, and the literature review is how you show the reader why it needed to be asked.
+
+-   Leave students with two concrete actions: a working research question and the start of a literature review table. These do not need to be final — they just need to exist so there is something to build on in the next session.
+:::
