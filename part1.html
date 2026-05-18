@@ -128,7 +128,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#ffffff" class="quarto-title-block center">
   <h1 class="title">A Practical Guide to Writing a Good Dissertation - Part I</h1>
   <p class="subtitle">The Research Question and Finding the Research Gap</p>
 
@@ -1255,6 +1255,18 @@ Conclusion
         }
       }
     });
+    </script>
+    <script>
+      // Inject logos into the title slide after reveal initialises
+      document.addEventListener('DOMContentLoaded', function() {
+        var titleSlide = document.querySelector('.reveal .slides section.title-slide, .reveal .slides section:first-child');
+        if (titleSlide) {
+          var logos = document.createElement('div');
+          logos.style.cssText = 'display:flex;align-items:center;justify-content:center;gap:2rem;margin-top:1.5rem;';
+          logos.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/sco/thumb/d/d1/University_College_London_logo.svg/3840px-University_College_London_logo.svg.png" style="height:55px;object-fit:contain;"><img src="CASA_logo.jpeg" style="height:55px;object-fit:contain;">';
+          titleSlide.appendChild(logos);
+        }
+      });
     </script>
     
 
