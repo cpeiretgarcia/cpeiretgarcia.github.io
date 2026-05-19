@@ -394,6 +394,10 @@ and does this relationship vary by
 
 ## How to Structure It
 
+![](https://lifelong-learning.ox.ac.uk/mnt/images/lit-review-image.png){width=80% fig-align="center"}
+
+## How to Structure It
+
 ::: {.fragment .fade-in style="font-size: 78%;"}
 **1. Foundational knowledge** — established, uncontroversial facts about your topic
 
