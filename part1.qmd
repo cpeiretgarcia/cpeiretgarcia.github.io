@@ -170,25 +170,25 @@ So before we do anything else — before we talk about data, methods, or writing
 
 ## Good vs. Bad Research Questions
 
-::: {.fragment .fade-in style="font-size: 75%;"}
+::: {.fragment .fade-in style="font-size: 62%;"}
 **Too vague:**
 
 > *What changes can we see in urban residents over the past decade?*
 :::
 
-::: {.fragment .fade-in style="font-size: 75%;"}
+::: {.fragment .fade-in style="font-size: 62%;"}
 **Better:**
 
 > *How have UK cities changed between the 2011 and 2021 census in terms of the age, language, health, work, income, and family status of urban residents?*
 :::
 
-::: {.fragment .fade-in style="font-size: 75%;"}
+::: {.fragment .fade-in style="font-size: 62%;"}
 **Too vague:**
 
 > *What effect have anti-climate change innovations had?*
 :::
 
-::: {.fragment .fade-in style="font-size: 75%;"}
+::: {.fragment .fade-in style="font-size: 62%;"}
 **Better:**
 
 > *What effect have UK government green grants had on the number of heat pump installations and installer certifications between 2008 and 2022?*
@@ -231,7 +231,7 @@ So before we do anything else — before we talk about data, methods, or writing
 ## Step 1: Define Your Research Topic
 
 ::: {.fragment .fade-in style="font-size: 80%;"}
--   You already have a broad topic from your MRes project.
+-   You already have a broad topic from your Masters project.
 :::
 
 ::: {.fragment .fade-in style="font-size: 80%;"}
